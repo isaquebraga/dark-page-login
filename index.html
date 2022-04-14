@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="/styles/index.css">
     <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
     <title>Login</title>
 </head>
@@ -21,17 +21,31 @@
 
                 <div class="textfield">
                     <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
+                    <input type="text" id="usuario" onchange="validateFieldUser();" name="usuario" placeholder="Usuário" required>
+                    
+                    <div class="error-message">
+                        <p id="user-required-error">Usuário é obrigatório.</p>
+                    </div>
+
+                    <div class="error-message">
+                        <p id="user-invalid-error">Usuário é inválido.</p>
+                    </div>
                 </div>
 
                 <div class="textfield">
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
+                    <input type="password" id="senha" onchange="validateFieldPassword();" name="senha" placeholder="Senha" required>
+                    
+                    <div class="error-message">
+                        <p id="password-required-error">Senha é obrigatória.</p>
+                    </div>
                 </div>
-
-                <button class="btn-login">Login</button>
+  
+                <button class="btn-login" id="btn-login" disabled="true" onclick="window.location.href='registered.html'">Login</button>
             </div>
         </div>
     </div>
+
+    <script src="/scripts/index.js"></script>
 </body>
 </html>
