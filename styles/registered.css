@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@700&family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@700&family=Josefin+Sans:wght@700&family=Noto+Sans:wght@400;700&display=swap');
 
 body {
     margin: 0;
@@ -17,6 +17,7 @@ body * {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-right: 2vw solid #77fcc0;
 }
 
 .left {
@@ -28,6 +29,12 @@ body * {
     align-items: center;
 }
 
+.menu {
+    position: absolute;
+    top: 0px;
+    left: -20px;
+}
+
 .left-text {
     background-color: #00000056;
     width: 40vw;
@@ -37,7 +44,7 @@ body * {
 
 .left h1 {
     font-size: 5vw;
-    color: #00ff88;
+    color: #9400D3;
     font-family: Akshar, sans-serif;
     padding-left: 20px;
 }
@@ -56,15 +63,9 @@ body * {
 }
 
 .social-medias {
-    display: flex;
-    padding-top: 10vh;
-    width: 5vw;
-    justify-content: center;
-    align-items: center;
-}
-
-.social-medias img {
-    padding-right: 1vw;
+    position: absolute;
+    bottom: 5px;
+    right: 35px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -83,5 +84,9 @@ body * {
 
     .image {
         width: 60vw;
+    }
+
+    .social-medias {
+        padding-top: 5vh;
     }
 }

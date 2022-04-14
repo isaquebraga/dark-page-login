@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@700&family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@700&family=Josefin+Sans:wght@700&family=Noto+Sans:wght@400;700&display=swap');
 
 body {
     margin: 0;
@@ -28,9 +28,9 @@ body * {
 }
 
 .left-login h1 {
-    font-size: 3vw;
+    font-size: 3.5vw;
     color: #77fcc0;
-    font-family: Akshar, sans-serif;
+    font-family: Josefin Sans, sans-serif;
 }
 
 .left-login-image {
@@ -172,7 +172,6 @@ body * {
 
 @media only screen and (min-width: 1024px) {
     .left-login h1 {
-        padding-left: 5vw;
-        padding-top: 4vh;
+        padding-left: 6vw;
     }
 }
