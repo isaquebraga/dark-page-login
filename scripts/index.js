@@ -55,6 +55,13 @@ function isPasswordValid() {
     const password = document.getElementById("senha").value;
     if (!password) {
         return false;
-    };
-    return true;
+    } else{
+        return true;
+    }
+};
+
+function enterTab(inputId, event){
+    if(event.keyCode == 13){
+        document.getElementById(inputId).focus();
+    }
 };

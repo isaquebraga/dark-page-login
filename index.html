@@ -21,7 +21,7 @@
 
                 <div class="textfield">
                     <label for="usuario">Usuário</label>
-                    <input type="text" id="usuario" onchange="validateFieldUser();" name="usuario" placeholder="Usuário" required>
+                    <input type="text" id="usuario" onchange="validateFieldUser();" name="usuario" placeholder="Usuário" onkeydown="javascript:enterTab('senha',event)" required>
                     
                     <div class="error-message">
                         <p id="user-required-error">Usuário é obrigatório.</p>
@@ -34,7 +34,7 @@
 
                 <div class="textfield">
                     <label for="senha">Senha</label>
-                    <input type="password" id="senha" onchange="validateFieldPassword();" name="senha" placeholder="Senha" required>
+                    <input type="password" id="senha" onchange="validateFieldPassword();" name="senha" placeholder="Senha" onkeydown="javascript:enterTab('btn-login',event)" required>
                     
                     <div class="error-message">
                         <p id="password-required-error">Senha é obrigatória.</p>
