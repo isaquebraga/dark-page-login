@@ -58,7 +58,3 @@ function isPasswordValid() {
     };
     return true;
 };
-
-function validForm() {
-    window.location.assign("/registered.html");
-}
