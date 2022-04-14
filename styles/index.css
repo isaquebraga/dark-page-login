@@ -128,6 +128,12 @@ body * {
     cursor: auto;
 }
 
+@media only screen and (max-width: 601px) {
+    .main-login {
+        height:110vh;
+    }
+}
+
 @media only screen and (max-width: 950px) {
     .card-login {
         width: 85%;
