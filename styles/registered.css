@@ -36,7 +36,7 @@ body * {
 }
 
 .left h1 {
-    font-size: 6vw;
+    font-size: 5vw;
     color: #00ff88;
     font-family: Akshar, sans-serif;
     padding-left: 20px;
@@ -70,5 +70,18 @@ body * {
 @media only screen and (max-width: 768px) {
     .main {
         flex-direction: column;
+    }
+
+    .left-text {
+        width: 80vw;
+    }
+
+    .left h1 {
+        font-size: 10vw;
+        padding-left: 20%;
+    }
+
+    .image {
+        width: 60vw;
     }
 }
