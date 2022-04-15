@@ -8,18 +8,18 @@ function validateFieldPassword() {
     tooglePasswordErrors();
 };
 
-function validateUser(usuario) {
-    return /\S+@\S+\.\S/.test(usuario);
-};
+// function validateUser(usuario) {
+//     return /\S+@\S+\.\S/.test(usuario);
+// };
 
-function isUserValid() {
-    const usuario = document.getElementById("usuario").value;
+// function isUserValid() {
+//     const usuario = document.getElementById("usuario").value;
 
-    if (!usuario) {
-        return false;
-    };
-    return validateUser(usuario);
-};
+//     if (!usuario) {
+//         return false;
+//     };
+//     return validateUser(usuario);
+// };
 
 function toogleUserErrors() {
     const usuario = document.getElementById("usuario").value;
@@ -29,11 +29,11 @@ function toogleUserErrors() {
         document.getElementById("user-required-error").style.display = "none";
     };
 
-    if (validateUser(usuario)) {
-        document.getElementById("user-invalid-error").style.display = "none";
-    } else {
-        document.getElementById("user-invalid-error").style.display = "flex";
-    };
+    // if (validateUser(usuario)) {
+    //     document.getElementById("user-invalid-error").style.display = "none";
+    // } else {
+    //     document.getElementById("user-invalid-error").style.display = "flex";
+    // };
 };
 
 function tooglePasswordErrors() {
@@ -43,12 +43,18 @@ function tooglePasswordErrors() {
     } else {
         document.getElementById("password-required-error").style.display = "none";
     };
-};
 
-function toogleButtonDisable() {
-    const userValid = isUserValid();
-    const passwordValid = isPasswordValid();
-    document.getElementById("btn-login").disabled = !userValid || !passwordValid;
+    if (isPasswordMin(password)) {
+        document.getElementById("password-lenght-min-error").style.display = "none";
+    } else {
+        document.getElementById("password-lenght-min-error").style.display = "flex";
+    };
+
+    if (isPasswordMax(password)) {
+        document.getElementById("password-lenght-max-error").style.display = "none";
+    } else {
+        document.getElementById("password-lenght-max-error").style.display = "flex";
+    };
 };
 
 function isPasswordValid() {
@@ -58,6 +64,32 @@ function isPasswordValid() {
     } else{
         return true;
     }
+};
+
+function isPasswordMin() {
+    const password = document.getElementById("senha").value;
+    if (password.length < 4) {
+        return false;
+    } else {
+        return true;
+    }
+};
+
+function isPasswordMax() {
+    const password = document.getElementById("senha").value;
+    if (password.length > 10) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function toogleButtonDisable() {
+    // const userValid = isUserValid();
+    const passwordValid = isPasswordValid();
+    const passwordMin = isPasswordMin();
+    const passwordMax = isPasswordMax();
+    document.getElementById("btn-login").disabled = !passwordValid || !passwordMin || !passwordMax;
 };
 
 function enterTab(inputId, event){

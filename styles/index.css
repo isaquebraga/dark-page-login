@@ -104,7 +104,7 @@ body * {
     font-size: 12px;
 }
 
-#user-required-error, #user-invalid-error, #password-required-error{
+#user-required-error, #user-invalid-error, #password-required-error, #password-lenght-min-error, #password-lenght-max-error{
     display: none;
 }
 
