@@ -34,8 +34,15 @@
 
                 <div class="textfield">
                     <label for="senha">Senha</label>
-                    <input type="password" id="senha" onchange="validateFieldPassword();" name="senha" placeholder="Senha" onkeydown="javascript:enterTab('btn-login',event),arrowUp('usuario',event)" required>
-                    
+
+                    <div class="input-password" id="input-password">
+                        <input type="password" id="senha" onchange="validateFieldPassword();" name="senha" placeholder="Senha" onkeydown="javascript:enterTab('btn-login',event),arrowUp('usuario',event)" required>
+                        <label class="switch">
+                            <input type="checkbox" id="checkbox" onclick="showPassword();">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
                     <div class="error-message">
                         <p id="password-required-error">Senha é obrigatória.</p>
                     </div>

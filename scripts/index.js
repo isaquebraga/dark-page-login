@@ -109,4 +109,14 @@ function loadingPage() {
         document.getElementById("loading").style.display="none";
         document.getElementById("main").style.display="flex";
     }, 4000);
+};
+
+function showPassword() {
+    var tipo = document.getElementById("senha");
+    if (tipo.type == "password") {
+        tipo.type = "text";
+    } else {
+        tipo.type = "password";
+    }
 }
+

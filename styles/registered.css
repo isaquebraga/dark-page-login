@@ -125,7 +125,7 @@ body * {
     display: none;
     justify-content: center;
     align-items: center;
-    border-right: 2vw solid #77fcc0;
+    border-right: 1vw solid #77fcc0;
 }
 
 .left {
