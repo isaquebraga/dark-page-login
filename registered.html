@@ -8,8 +8,29 @@
     <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
     <title>Login</title>
 </head>
-<body>
-    <div class="main">
+<body onload="loadingPage();"> 
+
+    <div class="loading" id="loading">
+        <div class="div-loading">
+            <div>
+                <h1>Fazendo login</h1>
+            </div>
+
+            <div class="spinner">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>            
+        </div>
+
+    </div>
+
+    <div class="main" id="main">
 
         <div class="left">
 
@@ -34,5 +55,7 @@
             </div>
         </div>
     </div>
+
+    <script src="/scripts/index.js"></script>
 </body>
 </html>

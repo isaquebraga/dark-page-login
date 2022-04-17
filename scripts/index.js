@@ -97,3 +97,16 @@ function enterTab(inputId, event){
         document.getElementById(inputId).focus();
     }
 };
+
+function arrowUp(inputId, event){
+    if(event.keyCode == 38){
+        document.getElementById(inputId).focus();
+    }
+};
+
+function loadingPage() {
+    setTimeout(function(){ 
+        document.getElementById("loading").style.display="none";
+        document.getElementById("main").style.display="flex";
+    }, 4000);
+}
