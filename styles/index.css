@@ -321,6 +321,11 @@ body * {
     .card-login {
         width: 90%;
     }
+
+    .left-login-image {
+        width: 25vw;
+    }
+    
 }
 
 @media only screen and (min-width: 1024px) {
